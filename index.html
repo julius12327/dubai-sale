@@ -1,0 +1,1383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Private Catalogue Sale, Dubai</title>
+<meta name="description" content="A private sale catalogue of furniture, kitchen equipment and gear.">
+<link id="app-font" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style id="app-style">
+:root{
+  --paper:#EDE8DA;
+  --paper-raised:#F8F5EC;
+  --paper-sunken:#E2DCC9;
+  --ink:#20261D;
+  --ink-soft:#5B6055;
+  --ink-faint:#8B8C79;
+  --line:#CEC5A9;
+  --accent:#33502F;
+  --accent-strong:#233A1F;
+  --accent-ink:#F4F2E6;
+  --brass:#93711F;
+  --brass-soft:#C9A855;
+  --brass-ink:#2A2210;
+  --stamp:#8A3A32;
+  --stamp-soft:#CBA7A0;
+  --shadow: 0 1px 0 rgba(32,38,29,0.05), 0 8px 20px -12px rgba(32,38,29,0.25);
+  --focus:#33502F;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15170F;
+    --paper-raised:#1E2118;
+    --paper-sunken:#0F110B;
+    --ink:#ECE7D6;
+    --ink-soft:#AEAA95;
+    --ink-faint:#7A7A65;
+    --line:#3A3D2C;
+    --accent:#84AC73;
+    --accent-strong:#A2CB8F;
+    --accent-ink:#132014;
+    --brass:#D8B65C;
+    --brass-soft:#EAD48E;
+    --brass-ink:#241D08;
+    --stamp:#D18E82;
+    --stamp-soft:#4A2B27;
+    --shadow: 0 1px 0 rgba(0,0,0,0.4), 0 10px 24px -14px rgba(0,0,0,0.6);
+    --focus:#A2CB8F;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15170F;
+  --paper-raised:#1E2118;
+  --paper-sunken:#0F110B;
+  --ink:#ECE7D6;
+  --ink-soft:#AEAA95;
+  --ink-faint:#7A7A65;
+  --line:#3A3D2C;
+  --accent:#84AC73;
+  --accent-strong:#A2CB8F;
+  --accent-ink:#132014;
+  --brass:#D8B65C;
+  --brass-soft:#EAD48E;
+  --brass-ink:#241D08;
+  --stamp:#D18E82;
+  --stamp-soft:#4A2B27;
+  --shadow: 0 1px 0 rgba(0,0,0,0.4), 0 10px 24px -14px rgba(0,0,0,0.6);
+  --focus:#A2CB8F;
+  color-scheme: dark;
+}
+
+*{box-sizing:border-box;}
+html{ color-scheme:light; }
+@media (prefers-color-scheme: dark){ html:not([data-theme="light"]){ color-scheme:dark; } }
+html[data-theme="dark"]{ color-scheme:dark; }
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  padding-inline:16px;
+  padding-block-end:48px;
+  padding-block-start:16px;
+}
+img{ max-width:100%; }
+::selection{ background:var(--brass-soft); color:var(--brass-ink); }
+a{ color:inherit; }
+.mono{ font-family:"IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+.display{ font-family:"Fraunces", Georgia, serif; }
+
+#root{ max-width:1180px; margin:0 auto; }
+
+/* ---------- masthead ---------- */
+.masthead{
+  padding-block:36px 22px;
+  border-bottom:1px solid var(--line);
+}
+.eyebrow{
+  font-family:"IBM Plex Mono", monospace;
+  font-size:0.72rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--brass);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:14px;
+}
+.eyebrow::before, .eyebrow::after{
+  content:"";
+  height:1px;
+  width:28px;
+  background:var(--brass);
+  opacity:0.6;
+}
+h1.title{
+  font-family:"Fraunces", Georgia, serif;
+  font-optical-sizing:auto;
+  font-weight:600;
+  font-size:clamp(2rem, 5vw, 3.1rem);
+  line-height:1.05;
+  margin:0 0 12px;
+  text-wrap:balance;
+  letter-spacing:-0.01em;
+}
+h1.title em{
+  font-style:italic;
+  font-weight:500;
+  color:var(--accent);
+}
+.subtitle{
+  color:var(--ink-soft);
+  font-size:1rem;
+  max-width:56ch;
+  line-height:1.55;
+  margin:0 0 24px;
+}
+.masthead-editrow{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
+.contact-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:"IBM Plex Sans", sans-serif;
+  font-weight:500;
+  font-size:0.88rem;
+  padding:10px 16px;
+  border-radius:3px;
+  border:1px solid transparent;
+  cursor:pointer;
+  text-decoration:none;
+  line-height:1.1;
+  transition:transform .12s ease, box-shadow .12s ease, background .15s ease;
+}
+.btn:active{ transform:translateY(1px); }
+.btn-primary{
+  background:var(--accent);
+  color:var(--accent-ink);
+  box-shadow:var(--shadow);
+}
+.btn-primary:hover{ background:var(--accent-strong); }
+.btn-outline{
+  background:transparent;
+  border-color:var(--line);
+  color:var(--ink);
+}
+.btn-outline:hover{ border-color:var(--ink-soft); }
+.btn-ghost{
+  background:transparent;
+  color:var(--ink-soft);
+  border-color:transparent;
+  padding:10px 12px;
+}
+.btn-ghost:hover{ color:var(--ink); }
+.btn-sm{ padding:6px 11px; font-size:0.78rem; }
+.btn[disabled]{ opacity:0.5; cursor:not-allowed; }
+.icon{ width:15px; height:15px; flex:none; display:block; }
+
+.stats-line{
+  margin-top:18px;
+  font-family:"IBM Plex Mono", monospace;
+  font-size:0.78rem;
+  color:var(--ink-faint);
+  letter-spacing:0.02em;
+}
+
+.notice-panel{
+  margin-top:16px;
+  padding:14px 16px;
+  background:var(--paper-sunken);
+  border:1px solid var(--line);
+  border-radius:4px;
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+  max-width:72ch;
+}
+.notice-item{
+  font-size:0.82rem;
+  line-height:1.55;
+  color:var(--ink-soft);
+}
+.notice-item strong{
+  color:var(--ink);
+  font-weight:600;
+}
+.notice-item .cond-pill{
+  margin:0 1px;
+  vertical-align:1px;
+}
+
+/* ---------- controls ---------- */
+.controls{
+  position:sticky;
+  top:env(safe-area-inset-top, 0px);
+  z-index:20;
+  background:var(--paper);
+  padding-block:14px;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 14px;
+  align-items:center;
+}
+.search-wrap{
+  position:relative;
+  flex:1 1 220px;
+  min-width:180px;
+}
+.search-wrap svg{
+  position:absolute; left:11px; top:50%; transform:translateY(-50%);
+  width:15px; height:15px; color:var(--ink-faint); pointer-events:none;
+}
+input[type="search"], input[type="text"], input[type="number"], input[type="email"], input[type="tel"], textarea, select{
+  font-family:"IBM Plex Sans", sans-serif;
+  font-size:0.88rem;
+  color:var(--ink);
+  background:var(--paper-raised);
+  border:1px solid var(--line);
+  border-radius:3px;
+  padding:9px 12px;
+}
+.search-wrap input{ width:100%; padding-left:32px; }
+input:focus, textarea:focus, select:focus{
+  outline:2px solid var(--focus);
+  outline-offset:1px;
+}
+.tabs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
+.tab{
+  font-family:"IBM Plex Mono", monospace;
+  font-size:0.74rem;
+  letter-spacing:0.03em;
+  padding:7px 11px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:transparent;
+  color:var(--ink-soft);
+  cursor:pointer;
+  white-space:nowrap;
+}
+.tab.active{
+  background:var(--ink);
+  color:var(--paper);
+  border-color:var(--ink);
+}
+:root[data-theme="dark"] .tab.active, .tab.active{ }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .tab.active{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+}
+:root[data-theme="dark"] .tab.active{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+
+.check-toggle{
+  display:flex; align-items:center; gap:6px;
+  font-size:0.78rem; color:var(--ink-soft);
+  font-family:"IBM Plex Mono", monospace;
+  white-space:nowrap;
+}
+.check-toggle input{ accent-color:var(--accent); width:14px; height:14px; }
+
+.spacer{ flex:1 1 auto; }
+
+/* ---------- category sections ---------- */
+.category-block{ padding-block:30px 6px; }
+.category-head{
+  display:flex; align-items:baseline; gap:12px;
+  margin-bottom:16px;
+  border-bottom:1px solid var(--line);
+  padding-bottom:8px;
+}
+.category-head .code{
+  font-family:"IBM Plex Mono", monospace;
+  font-size:0.72rem;
+  color:var(--paper);
+  background:var(--brass);
+  padding:3px 7px;
+  border-radius:2px;
+  letter-spacing:0.05em;
+}
+.category-head h2{
+  font-family:"Fraunces", serif;
+  font-weight:600;
+  font-size:1.35rem;
+  margin:0;
+  flex:1;
+}
+.category-head .count{
+  font-family:"IBM Plex Mono", monospace;
+  font-size:0.76rem;
+  color:var(--ink-faint);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(268px, 1fr));
+  gap:18px;
+}
+
+/* ---------- card ---------- */
+.card{
+  background:var(--paper-raised);
+  border:1px solid var(--line);
+  border-radius:4px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  box-shadow:var(--shadow);
+}
+.card.sold{ opacity:0.62; }
+.card-top{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:10px 12px 0;
+}
+.lot-no{
+  font-family:"IBM Plex Mono", monospace;
+  font-size:0.72rem;
+  color:var(--brass);
+  letter-spacing:0.03em;
+}
+.cond-pill{
+  font-family:"IBM Plex Mono", monospace;
+  font-size:0.66rem;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  padding:3px 8px;
+  border-radius:999px;
+  border:1px solid var(--line);
+}
+.cond-excellent{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+.cond-good{ color:var(--brass); border-color:var(--brass); }
+.cond-fair{ color:var(--stamp); border-color:var(--stamp); }
+
+.thumb{
+  margin:10px 12px 0;
+  aspect-ratio:4/3;
+  border-radius:3px;
+  border:1px solid var(--line);
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--paper-sunken);
+}
+.thumb img{ width:100%; height:100%; object-fit:contain; display:block; }
+.thumb-img{ cursor:zoom-in; }
+.thumb .swatch{
+  position:absolute; inset:0;
+  opacity:0.55;
+}
+.thumb .thumb-label{
+  position:relative;
+  font-family:"IBM Plex Mono", monospace;
+  font-size:0.68rem;
+  color:var(--ink-faint);
+  background:var(--paper-raised);
+  padding:4px 9px;
+  border-radius:999px;
+  border:1px solid var(--line);
+}
+.thumb-gallery{
+  position:absolute; inset:0;
+  display:flex;
+  overflow-x:auto;
+  overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.thumb-gallery::-webkit-scrollbar{ display:none; }
+.thumb-gallery .thumb-slide{
+  flex:0 0 100%;
+  scroll-snap-align:start;
+  width:100%; height:100%;
+  display:flex; align-items:center; justify-content:center;
+}
+.thumb-gallery img{ width:100%; height:100%; object-fit:contain; display:block; }
+.thumb-dots{
+  position:absolute; left:0; right:0; bottom:8px;
+  display:flex; justify-content:center; gap:7px;
+}
+.thumb-dots .dot{
+  width:8px; height:8px; border-radius:999px;
+  border:none; padding:0;
+  background:rgba(255,255,255,0.55);
+  box-shadow:0 0 0 1px rgba(0,0,0,0.18);
+  transition:background 0.15s, transform 0.15s;
+  cursor:pointer;
+}
+.thumb-dots .dot.active{ background:#fff; transform:scale(1.35); }
+.thumb-nav{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:34px; height:34px; border-radius:999px;
+  border:none; background:rgba(20,18,14,0.45); color:#fff;
+  font-size:20px; line-height:1; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; pointer-events:none;
+  transition:opacity 0.15s, background 0.15s;
+}
+.thumb:hover .thumb-nav{ opacity:1; pointer-events:auto; }
+.thumb-nav.prev{ left:7px; }
+.thumb-nav.next{ right:7px; }
+.thumb-nav:active{ background:rgba(20,18,14,0.65); }
+
+/* ---------- lightbox ---------- */
+.lightbox{
+  position:fixed; inset:0; z-index:60;
+  background:rgba(10,10,8,0.92);
+  display:flex; align-items:center; justify-content:center;
+  padding:28px;
+  cursor:zoom-out;
+}
+.lightbox[hidden]{ display:none; }
+.lightbox img{
+  max-width:min(92vw, 1200px);
+  max-height:86vh;
+  object-fit:contain;
+  border-radius:4px;
+  box-shadow:0 24px 60px -20px rgba(0,0,0,0.6);
+  cursor:default;
+}
+.lightbox-close, .lightbox-nav{
+  position:absolute;
+  border:none; background:rgba(255,255,255,0.12); color:#fff;
+  line-height:1; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  border-radius:999px;
+  transition:background 0.15s;
+}
+.lightbox-close:hover, .lightbox-nav:hover{ background:rgba(255,255,255,0.24); }
+.lightbox-close{
+  top:16px; right:16px;
+  width:40px; height:40px;
+  font-size:22px;
+}
+.lightbox-nav{
+  top:50%; transform:translateY(-50%);
+  width:46px; height:46px;
+  font-size:24px;
+}
+.lightbox-nav.prev{ left:16px; }
+.lightbox-nav.next{ right:16px; }
+.lightbox-counter{
+  position:absolute; bottom:20px; left:50%; transform:translateX(-50%);
+  font-family:"IBM Plex Mono", monospace;
+  font-size:0.78rem; color:rgba(255,255,255,0.8);
+  background:rgba(0,0,0,0.4);
+  padding:4px 11px;
+  border-radius:999px;
+}
+@media (max-width:640px){
+  .lightbox-nav{ width:40px; height:40px; font-size:21px; }
+  .lightbox-close{ width:36px; height:36px; font-size:20px; }
+}
+
+.card-body{
+  padding:12px 14px 14px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  flex:1;
+}
+.card-title{
+  font-family:"Fraunces", serif;
+  font-weight:600;
+  font-size:1.02rem;
+  line-height:1.28;
+  margin:0;
+}
+.card-notes{
+  font-size:0.83rem;
+  color:var(--ink-soft);
+  line-height:1.45;
+  font-style:italic;
+}
+.card-meta{
+  font-family:"IBM Plex Mono", monospace;
+  font-size:0.72rem;
+  color:var(--ink-faint);
+  text-transform:uppercase;
+  letter-spacing:0.03em;
+}
+.price-row{
+  margin-top:auto;
+  padding-top:10px;
+  display:flex;
+  align-items:baseline;
+  gap:9px;
+  flex-wrap:wrap;
+}
+.price-orig{
+  font-family:"IBM Plex Mono", monospace;
+  font-size:0.82rem;
+  color:var(--ink-faint);
+  text-decoration:line-through;
+}
+.price-now{
+  font-family:"IBM Plex Mono", monospace;
+  font-weight:600;
+  font-size:1.28rem;
+  color:var(--ink);
+}
+.price-currency{ font-size:0.7em; font-weight:500; margin-right:2px; color:var(--ink-soft); }
+.discount-tag{
+  font-family:"IBM Plex Mono", monospace;
+  font-size:0.68rem;
+  color:var(--stamp);
+  border:1px solid var(--stamp-soft);
+  padding:2px 6px;
+  border-radius:3px;
+  margin-left:auto;
+}
+.card-actions{
+  display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;
+}
+.card-actions .btn{ flex:1 1 auto; justify-content:center; }
+.link-out{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  font-size:0.95rem;
+  font-weight:500;
+  color:var(--ink);
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+.stamp-mark{
+  position:absolute;
+  top:38%;
+  left:50%;
+  transform:translate(-50%,-50%) rotate(-9deg);
+  font-family:"IBM Plex Mono", monospace;
+  font-weight:600;
+  font-size:1.6rem;
+  letter-spacing:0.12em;
+  color:var(--stamp);
+  border:3px solid var(--stamp);
+  padding:4px 16px;
+  border-radius:4px;
+  mix-blend-mode:multiply;
+  pointer-events:none;
+  z-index:5;
+  background:color-mix(in srgb, var(--stamp) 6%, transparent);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .stamp-mark{ mix-blend-mode:screen; }
+}
+:root[data-theme="dark"] .stamp-mark{ mix-blend-mode:screen; }
+
+/* ---------- edit mode ---------- */
+.edit-field{ width:100%; }
+.edit-field textarea{ width:100%; min-height:52px; resize:vertical; font-style:normal; }
+.edit-grid{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.edit-label{
+  font-family:"IBM Plex Mono", monospace;
+  font-size:0.65rem;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  color:var(--ink-faint);
+  margin-bottom:3px;
+  display:block;
+}
+.edit-row-tools{ display:flex; justify-content:space-between; align-items:center; margin-top:8px; }
+.trash-btn{
+  background:transparent; border:1px solid var(--line); color:var(--stamp);
+  border-radius:3px; padding:6px 10px; font-size:0.72rem; cursor:pointer;
+  font-family:"IBM Plex Mono", monospace;
+}
+.trash-btn:hover{ border-color:var(--stamp); }
+.card.editing{ outline:1.5px dashed var(--brass); outline-offset:-1px; }
+.sold-toggle{ display:flex; align-items:center; gap:6px; font-size:0.78rem; color:var(--ink-soft); }
+
+.add-lot-btn{
+  border:1.5px dashed var(--line);
+  border-radius:4px;
+  background:transparent;
+  color:var(--ink-faint);
+  min-height:180px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  font-family:"IBM Plex Mono", monospace;
+  font-size:0.82rem;
+}
+.add-lot-btn:hover{ color:var(--accent); border-color:var(--accent); }
+
+.settings-panel{
+  background:var(--paper-raised);
+  border:1px solid var(--brass-soft);
+  border-radius:4px;
+  padding:16px;
+  margin-block:18px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+  gap:12px;
+}
+.settings-panel .full{ grid-column:1/-1; }
+.settings-panel label{ display:block; }
+.settings-panel input, .settings-panel textarea{ width:100%; margin-top:4px; }
+
+.save-bar{
+  position:fixed;
+  left:0; right:0; bottom:0;
+  z-index:40;
+  background:var(--ink);
+  color:var(--paper);
+  padding:12px 16px;
+  padding-bottom:calc(12px + env(safe-area-inset-bottom, 0px));
+  display:flex;
+  align-items:center;
+  gap:14px;
+  justify-content:center;
+  box-shadow:0 -8px 24px -10px rgba(0,0,0,0.4);
+}
+.save-bar span{ font-family:"IBM Plex Mono", monospace; font-size:0.8rem; color:var(--ink-faint); }
+.save-bar .btn-primary{ background:var(--brass); color:var(--brass-ink); }
+.save-bar .btn-primary:hover{ background:var(--brass-soft); }
+
+.toast{
+  position:fixed; bottom:74px; left:50%; transform:translateX(-50%);
+  background:var(--ink); color:var(--paper);
+  padding:10px 18px; border-radius:4px; font-size:0.84rem;
+  z-index:50; box-shadow:var(--shadow);
+}
+
+footer.page-footer{
+  margin-top:40px;
+  padding-block:28px;
+  border-top:1px solid var(--line);
+  display:flex; flex-wrap:wrap; gap:16px 24px; align-items:center;
+  color:var(--ink-soft); font-size:0.85rem;
+}
+footer.page-footer .links{ display:flex; gap:16px; flex-wrap:wrap; }
+footer.page-footer a{ text-decoration:underline; text-underline-offset:2px; }
+
+.empty-state{
+  padding-block:60px;
+  text-align:center;
+  color:var(--ink-faint);
+  font-family:"IBM Plex Mono", monospace;
+}
+
+[hidden]{ display:none !important; }
+
+@media (max-width:640px){
+  .edit-grid{ grid-template-columns:1fr; }
+  .category-head h2{ font-size:1.15rem; }
+}
+</style>
+</head>
+<body>
+<div id="root">Loading catalogue…</div>
+<div id="lightbox" class="lightbox" hidden><button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button><button type="button" class="lightbox-nav prev" id="lightbox-prev" aria-label="Previous photo">&#8249;</button><img id="lightbox-img" src="" alt=""><button type="button" class="lightbox-nav next" id="lightbox-next" aria-label="Next photo">&#8250;</button><div class="lightbox-counter" id="lightbox-counter"></div></div>
+<script id="app-script">
+(function(){
+  "use strict";
+
+  var STATE = null;
+  var CATEGORY_CODES = {"Furniture & Decor": "FUR", "Kitchen & Household": "KIT", "Professional Kitchen Equipment": "PRO", "Sportsgear": "SPT", "Other": "OTH"};
+  var CATEGORY_ORDER = ["Furniture & Decor", "Kitchen & Household", "Professional Kitchen Equipment", "Sportsgear", "Other"];
+  var LIGHTBOX_HTML = "<div id=\"lightbox\" class=\"lightbox\" hidden><button type=\"button\" class=\"lightbox-close\" id=\"lightbox-close\" aria-label=\"Close\">&times;</button><button type=\"button\" class=\"lightbox-nav prev\" id=\"lightbox-prev\" aria-label=\"Previous photo\">&#8249;</button><img id=\"lightbox-img\" src=\"\" alt=\"\"><button type=\"button\" class=\"lightbox-nav next\" id=\"lightbox-next\" aria-label=\"Next photo\">&#8250;</button><div class=\"lightbox-counter\" id=\"lightbox-counter\"></div></div>";
+  var DATA_PATH = 'items.json';
+  var OWNER_KEY = 'dubaiSaleOwnerConfig_v1';
+  var GITHUB_API = 'https://api.github.com';
+
+  var ui = {
+    query: "",
+    category: "All",
+    hideSold: false,
+    editMode: false,
+    canEdit: false,
+    showSettings: false,
+    showOwnerLogin: false,
+    ownerError: "",
+    ownerBusy: false,
+  };
+
+  function getOwnerConfig(){
+    try {
+      var raw = localStorage.getItem(OWNER_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch(e){ return null; }
+  }
+  function setOwnerConfig(cfg){
+    try { localStorage.setItem(OWNER_KEY, JSON.stringify(cfg)); } catch(e){}
+  }
+  function clearOwnerConfig(){
+    try { localStorage.removeItem(OWNER_KEY); } catch(e){}
+  }
+
+  function escapeHtml(s){
+    if (s === undefined || s === null) return "";
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
+    });
+  }
+
+  function fmtAED(n){
+    var v = Math.round(Number(n) || 0);
+    return v.toLocaleString('en-US');
+  }
+
+  function waLink(number, text){
+    return "https://wa.me/" + encodeURIComponent(number).replace(/%2B/g,'') + "?text=" + encodeURIComponent(text);
+  }
+
+  function itemWaText(item){
+    return "Hi! I'm interested in Lot " + item.lot + " - " + item.name + " (AED " + fmtAED(item.price) + "). Is it still available?";
+  }
+
+  function generalWaText(){
+    return "Hi! I saw your Dubai sale catalogue and had a question.";
+  }
+
+  function svgIcon(name){
+    if (name === 'whatsapp') return '<svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.33 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm0 18.2h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.24 8.24 0 0 1-1.26-4.38c0-4.55 3.7-8.25 8.26-8.25 2.21 0 4.28.86 5.84 2.42a8.2 8.2 0 0 1 2.42 5.84c0 4.55-3.71 8.23-8.27 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.24-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.47-.01a.9.9 0 0 0-.65.31c-.23.24-.86.84-.86 2.05s.88 2.38 1 2.55c.13.17 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>';
+    if (name === 'mail') return '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg>';
+    if (name === 'search') return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>';
+    if (name === 'pencil') return '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>';
+    if (name === 'gear') return '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.04 1.56V21a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 9 19.35a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.65 15a1.7 1.7 0 0 0-1.56-1.04H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.65 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.65 1.7 1.7 0 0 0 10.04 3.1V3a2 2 0 1 1 4 0v.09c0 .69.39 1.32 1.04 1.56.65.24 1.38.1 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.35 9c.24.65.87 1.04 1.56 1.04H21a2 2 0 1 1 0 4h-.09c-.69 0-1.32.39-1.51 1.04Z"/></svg>';
+    if (name === 'link') return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="15" height="15" style="display:inline;vertical-align:-2px" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>';
+    return '';
+  }
+
+  function conditionClass(c){
+    var k = String(c || '').toLowerCase();
+    if (k.indexOf('excel') === 0) return 'cond-excellent';
+    if (k.indexOf('fair') === 0) return 'cond-fair';
+    return 'cond-good';
+  }
+
+  function categoryCode(cat){ return CATEGORY_CODES[cat] || '—'; }
+
+  function swatchStyle(cat){
+    var hues = {
+      'Furniture & Decor': 'var(--brass-soft)',
+      'Kitchen & Household': 'var(--accent)',
+      'Professional Kitchen Equipment': 'var(--stamp-soft)',
+      'Sportsgear': 'var(--accent-strong)',
+      'Other': 'var(--brass)'
+    };
+    var c = hues[cat] || 'var(--brass)';
+    return 'background:repeating-linear-gradient(135deg,' + c + ' 0 2px, transparent 2px 14px);';
+  }
+
+  function renderThumbGallery(item, alt){
+    var imgs = (item.images || []).filter(Boolean);
+    if (!imgs.length){
+      return '<div class="swatch" style="' + swatchStyle(item.category) + '"></div><span class="thumb-label">Photo coming soon</span>';
+    }
+    if (imgs.length === 1){
+      return '<img class="thumb-img" data-idx="0" src="' + escapeHtml(imgs[0]) + '" alt="' + escapeHtml(alt) + '" loading="lazy">';
+    }
+    var slides = imgs.map(function(src, i){
+      return '<div class="thumb-slide"><img class="thumb-img" data-idx="' + i + '" src="' + escapeHtml(src) + '" alt="' + escapeHtml(alt) + '" loading="lazy"></div>';
+    }).join('');
+    var dots = imgs.map(function(_, i){
+      return '<span class="dot' + (i === 0 ? ' active' : '') + '" data-dot="' + i + '"></span>';
+    }).join('');
+    return '<div class="thumb-gallery" data-gallery>' + slides + '</div>'
+      + '<div class="thumb-dots">' + dots + '</div>'
+      + '<button type="button" class="thumb-nav prev" data-nav="-1" aria-label="Previous photo">' + '&#8249;' + '</button>'
+      + '<button type="button" class="thumb-nav next" data-nav="1" aria-label="Next photo">' + '&#8250;' + '</button>';
+  }
+
+  function renderCardView(item){
+    var discount = item.originalPrice > 0 ? Math.round((1 - (item.price / item.originalPrice)) * 100) : 0;
+    var metaBits = [];
+    if (item.brand) metaBits.push(escapeHtml(item.brand));
+    metaBits.push(escapeHtml(item.condition));
+    var thumb = renderThumbGallery(item, item.name);
+    var stamp = item.sold ? '<div class="stamp-mark">SOLD</div>' : '';
+    var linkOut = item.link ? '<a class="link-out" href="' + escapeHtml(item.link) + '" target="_blank" rel="noopener">Original listing ' + svgIcon('link') + '</a>' : '';
+    return ''
+      + '<div class="card-top">'
+        + '<span class="lot-no">LOT No.' + String(item.lot).padStart(3,'0') + '</span>'
+        + '<span class="cond-pill ' + conditionClass(item.condition) + '">' + escapeHtml(item.condition) + '</span>'
+      + '</div>'
+      + '<div class="thumb">' + thumb + '</div>'
+      + stamp
+      + '<div class="card-body">'
+        + '<h3 class="card-title">' + escapeHtml(item.name) + '</h3>'
+        + (item.notes ? '<p class="card-notes">' + escapeHtml(item.notes) + '</p>' : '')
+        + '<div class="card-meta">' + metaBits.join(' · ') + '</div>'
+        + '<div class="price-row">'
+          + (item.originalPrice > item.price ? '<span class="price-orig">AED ' + fmtAED(item.originalPrice) + '</span>' : '')
+          + '<span class="price-now"><span class="price-currency">AED</span>' + fmtAED(item.price) + '</span>'
+          + (discount > 0 ? '<span class="discount-tag">-' + discount + '%</span>' : '')
+        + '</div>'
+        + '<div class="card-actions">'
+          + '<a class="btn btn-primary btn-sm" href="' + waLink(STATE.settings.whatsapp, itemWaText(item)) + '" target="_blank" rel="noopener">' + svgIcon('whatsapp') + ' Ask on WhatsApp</a>'
+        + '</div>'
+        + (linkOut ? '<div style="margin-top:8px">' + linkOut + '</div>' : '')
+      + '</div>';
+  }
+
+  function renderCardEdit(item){
+    var idAttr = escapeHtml(item.id);
+    return ''
+      + '<div class="card-top">'
+        + '<span class="lot-no">LOT No.' + String(item.lot).padStart(3,'0') + '</span>'
+        + '<label class="sold-toggle"><input type="checkbox" data-field="sold" data-id="' + idAttr + '" ' + (item.sold ? 'checked' : '') + '> Sold</label>'
+      + '</div>'
+      + '<div class="thumb">' + renderThumbGallery(item, '') + '</div>'
+      + '<div class="card-body">'
+        + '<label class="edit-field"><span class="edit-label">Name</span><input type="text" data-field="name" data-id="' + idAttr + '" value="' + escapeHtml(item.name) + '"></label>'
+        + '<label class="edit-field"><span class="edit-label">Notes / description</span><textarea data-field="notes" data-id="' + idAttr + '">' + escapeHtml(item.notes) + '</textarea></label>'
+        + '<div class="edit-grid">'
+          + '<label class="edit-field"><span class="edit-label">Brand</span><input type="text" data-field="brand" data-id="' + idAttr + '" value="' + escapeHtml(item.brand) + '"></label>'
+          + '<label class="edit-field"><span class="edit-label">Condition</span>'
+            + '<select data-field="condition" data-id="' + idAttr + '">'
+              + ['Excellent','Good','Fair'].map(function(c){ return '<option ' + (item.condition===c?'selected':'') + '>' + c + '</option>'; }).join('')
+            + '</select></label>'
+          + '<label class="edit-field"><span class="edit-label">Original price (AED)</span><input type="number" min="0" step="1" data-field="originalPrice" data-id="' + idAttr + '" value="' + item.originalPrice + '"></label>'
+          + '<label class="edit-field"><span class="edit-label">Asking price (AED)</span><input type="number" min="0" step="1" data-field="price" data-id="' + idAttr + '" value="' + item.price + '"></label>'
+        + '</div>'
+        + '<label class="edit-field"><span class="edit-label">Listing link (optional)</span><input type="text" data-field="link" data-id="' + idAttr + '" value="' + escapeHtml(item.link) + '"></label>'
+        + '<div class="edit-row-tools">'
+          + '<span class="card-meta">Category: ' + escapeHtml(item.category) + '</span>'
+          + '<button type="button" class="trash-btn" data-action="remove" data-id="' + idAttr + '">Remove lot</button>'
+        + '</div>'
+      + '</div>';
+  }
+
+  function matchesFilter(item){
+    if (ui.hideSold && item.sold) return false;
+    if (ui.category !== 'All' && item.category !== ui.category) return false;
+    if (ui.query){
+      var q = ui.query.toLowerCase();
+      var hay = (item.name + ' ' + item.brand + ' ' + item.notes).toLowerCase();
+      if (hay.indexOf(q) === -1) return false;
+    }
+    return true;
+  }
+
+  function categoryCounts(){
+    var counts = {};
+    CATEGORY_ORDER.forEach(function(c){ counts[c] = 0; });
+    STATE.items.forEach(function(it){ if (!ui.hideSold || !it.sold){ counts[it.category] = (counts[it.category]||0) + 1; } });
+    return counts;
+  }
+
+  function renderTabs(){
+    var counts = categoryCounts();
+    var total = STATE.items.filter(function(it){ return !ui.hideSold || !it.sold; }).length;
+    var tabs = ['<button class="tab ' + (ui.category==='All'?'active':'') + '" data-tab="All">All · ' + total + '</button>'];
+    CATEGORY_ORDER.forEach(function(cat){
+      if (!counts[cat]) return;
+      tabs.push('<button class="tab ' + (ui.category===cat?'active':'') + '" data-tab="' + escapeHtml(cat) + '">' + escapeHtml(cat) + ' · ' + counts[cat] + '</button>');
+    });
+    return tabs.join('');
+  }
+
+  function soldCount(){ return STATE.items.filter(function(it){ return it.sold; }).length; }
+
+  function renderOwnerLoginPanel(){
+    var cfg = getOwnerConfig() || {};
+    return ''
+      + '<div class="settings-panel">'
+        + '<label class="full"><span class="edit-label">GitHub username or org</span><input type="text" id="owner-username" value="' + escapeHtml(cfg.owner || '') + '" placeholder="e.g. juliusrieg"></label>'
+        + '<label><span class="edit-label">Repository name</span><input type="text" id="owner-repo" value="' + escapeHtml(cfg.repo || '') + '" placeholder="e.g. dubai-sale"></label>'
+        + '<label><span class="edit-label">Branch</span><input type="text" id="owner-branch" value="' + escapeHtml(cfg.branch || 'main') + '"></label>'
+        + '<label class="full"><span class="edit-label">Personal access token (fine-grained, this repo only, Contents: Read and write)</span><input type="password" id="owner-token" value="" placeholder="paste token — stored only in this browser"></label>'
+        + (ui.ownerError ? '<div class="full" style="color:var(--stamp); font-size:0.8rem;">' + escapeHtml(ui.ownerError) + '</div>' : '')
+        + '<div class="full" style="display:flex; gap:8px;">'
+          + '<button type="button" class="btn btn-primary btn-sm" id="owner-connect"' + (ui.ownerBusy ? ' disabled' : '') + '>' + (ui.ownerBusy ? 'Checking…' : 'Connect') + '</button>'
+          + '<button type="button" class="btn btn-ghost btn-sm" id="owner-cancel">Cancel</button>'
+        + '</div>'
+      + '</div>';
+  }
+
+  function renderSettingsPanel(){
+    if (!ui.editMode || !ui.showSettings) return '';
+    var s = STATE.settings;
+    return ''
+      + '<div class="settings-panel">'
+        + '<label class="full"><span class="edit-label">Page title</span><input type="text" id="set-title" value="' + escapeHtml(s.title) + '"></label>'
+        + '<label class="full"><span class="edit-label">Subtitle</span><textarea id="set-subtitle">' + escapeHtml(s.subtitle) + '</textarea></label>'
+        + '<label><span class="edit-label">WhatsApp number (with country code, no +)</span><input type="text" id="set-whatsapp" value="' + escapeHtml(s.whatsapp) + '"></label>'
+        + '<label><span class="edit-label">Email</span><input type="email" id="set-email" value="' + escapeHtml(s.email) + '"></label>'
+        + '<label><span class="edit-label">Facebook Marketplace link</span><input type="text" id="set-fb" value="' + escapeHtml(s.facebookLink) + '"></label>'
+        + '<label><span class="edit-label">Dubizzle link</span><input type="text" id="set-dz" value="' + escapeHtml(s.dubizzleLink) + '"></label>'
+      + '</div>';
+  }
+
+  function renderNoticePanel(){
+    return ''
+      + '<div class="notice-panel">'
+        + '<div class="notice-item"><strong>Age:</strong> Everything here is less than two years old — many pieces are barely a year old. The only exception is the kite equipment, which is older than two years.</div>'
+        + '<div class="notice-item"><strong>Condition:</strong> <span class="cond-pill cond-excellent">Excellent</span> — like new, barely used · <span class="cond-pill cond-good">Good</span> — some wear from normal use, fully functional · <span class="cond-pill cond-fair">Fair</span> — noticeable wear or minor flaws, still fully functional.</div>'
+        + '<div class="notice-item"><strong>Photos:</strong> Not always ideal — this sale was put together quickly while packing to leave, so a few shots are rough phone photos rather than styled ones. The items themselves are as described.</div>'
+      + '</div>';
+  }
+
+  function renderMasthead(){
+    var s = STATE.settings;
+    var contactBtns = ''
+      + '<a class="btn btn-primary" href="' + waLink(s.whatsapp, generalWaText()) + '" target="_blank" rel="noopener">' + svgIcon('whatsapp') + ' Message on WhatsApp</a>'
+      + '<a class="btn btn-outline" href="mailto:' + escapeHtml(s.email) + '?subject=' + encodeURIComponent('Dubai sale catalogue') + '">' + svgIcon('mail') + ' Email</a>'
+      + (s.facebookLink ? '<a class="btn btn-outline" href="' + escapeHtml(s.facebookLink) + '" target="_blank" rel="noopener">Facebook Marketplace ' + svgIcon('link') + '</a>' : '')
+      + (s.dubizzleLink ? '<a class="btn btn-outline" href="' + escapeHtml(s.dubizzleLink) + '" target="_blank" rel="noopener">Dubizzle ' + svgIcon('link') + '</a>' : '');
+
+    var editToggle = ui.canEdit
+      ? '<button type="button" class="btn btn-ghost btn-sm" id="edit-toggle">' + svgIcon('pencil') + (ui.editMode ? ' Done editing' : ' Edit catalogue') + '</button>'
+        + (ui.editMode ? '<button type="button" class="btn btn-ghost btn-sm" id="settings-toggle">' + svgIcon('gear') + ' Page settings</button>' : '')
+        + '<button type="button" class="btn btn-ghost btn-sm" id="owner-signout">Sign out (owner)</button>'
+      : '<button type="button" class="btn btn-ghost btn-sm" id="owner-toggle">' + svgIcon('gear') + ' Owner sign-in</button>';
+
+    return ''
+      + '<div class="eyebrow">Private sale · Dubai, UAE</div>'
+      + '<h1 class="title">' + escapeHtml(s.title) + '</h1>'
+      + '<p class="subtitle">' + escapeHtml(s.subtitle) + '</p>'
+      + '<div class="masthead-editrow">' + editToggle + '</div>'
+      + (ui.showOwnerLogin ? renderOwnerLoginPanel() : '')
+      + renderSettingsPanel()
+      + '<div class="contact-row">' + contactBtns + '</div>'
+      + '<div class="stats-line">' + STATE.items.length + ' lots listed · ' + soldCount() + ' sold</div>'
+      + renderNoticePanel();
+  }
+
+  function renderControls(){
+    return ''
+      + '<div class="search-wrap">' + svgIcon('search') + '<input type="search" id="search-input" placeholder="Search by name or brand…" value="' + escapeHtml(ui.query) + '"></div>'
+      + '<div class="tabs" id="tabs">' + renderTabs() + '</div>'
+      + '<div class="spacer"></div>'
+      + '<label class="check-toggle"><input type="checkbox" id="hide-sold" ' + (ui.hideSold?'checked':'') + '> Hide sold</label>';
+  }
+
+  function renderCategoryBlocks(){
+    var visible = STATE.items.filter(matchesFilter);
+    if (!visible.length){
+      return '<div class="empty-state">No lots match your search.</div>';
+    }
+    var byCat = {};
+    visible.forEach(function(it){ (byCat[it.category] = byCat[it.category] || []).push(it); });
+    var cats = ui.category === 'All' ? CATEGORY_ORDER : [ui.category];
+    var out = '';
+    cats.forEach(function(cat){
+      var list = byCat[cat];
+      if (!list || !list.length){
+        if (ui.editMode && ui.category === cat) list = [];
+        else return;
+      }
+      out += '<section class="category-block">'
+        + '<div class="category-head"><span class="code">' + categoryCode(cat) + '</span><h2>' + escapeHtml(cat) + '</h2><span class="count">' + list.length + '</span></div>'
+        + '<div class="grid">'
+        + list.map(function(it){
+            var cls = 'card' + (it.sold ? ' sold' : '') + (ui.editMode ? ' editing' : '');
+            return '<article class="' + cls + '" data-card-id="' + escapeHtml(it.id) + '">' + (ui.editMode ? renderCardEdit(it) : renderCardView(it)) + '</article>';
+          }).join('')
+        + (ui.editMode ? '<button type="button" class="add-lot-btn" data-action="add" data-cat="' + escapeHtml(cat) + '">+ Add a lot to ' + escapeHtml(cat) + '</button>' : '')
+        + '</div>'
+      + '</section>';
+    });
+    return out;
+  }
+
+  function renderFooter(){
+    var s = STATE.settings;
+    var links = [];
+    if (s.facebookLink) links.push('<a href="' + escapeHtml(s.facebookLink) + '" target="_blank" rel="noopener">Facebook Marketplace</a>');
+    if (s.dubizzleLink) links.push('<a href="' + escapeHtml(s.dubizzleLink) + '" target="_blank" rel="noopener">Dubizzle</a>');
+    return '<footer class="page-footer">'
+      + '<span>Questions on any lot? <a href="' + waLink(s.whatsapp, generalWaText()) + '" target="_blank" rel="noopener">WhatsApp</a> or <a href="mailto:' + escapeHtml(s.email) + '">email</a>.</span>'
+      + (links.length ? '<div class="links">' + links.join('') + '</div>' : '')
+      + '</footer>';
+  }
+
+  function renderSaveBar(){
+    if (!ui.editMode) return '';
+    return '<div class="save-bar"><span>Editing — changes are only visible to you until you save.</span><button type="button" class="btn btn-primary" id="save-btn">Save changes</button></div>';
+  }
+
+  function renderApp(){
+    return ''
+      + '<div class="masthead">' + renderMasthead() + '</div>'
+      + '<div class="controls">' + renderControls() + '</div>'
+      + renderCategoryBlocks()
+      + renderFooter()
+      + renderSaveBar();
+  }
+
+  function el(sel, root){ return (root||document).querySelector(sel); }
+  function els(sel, root){ return Array.prototype.slice.call((root||document).querySelectorAll(sel)); }
+
+  var root = document.getElementById('root');
+
+  function findItem(id){
+    for (var i=0;i<STATE.items.length;i++){ if (STATE.items[i].id === id) return STATE.items[i]; }
+    return null;
+  }
+
+  function render(){
+    root.innerHTML = renderApp();
+    wire();
+  }
+
+  function wire(){
+    var search = el('#search-input');
+    if (search){
+      search.addEventListener('input', function(){ ui.query = search.value; renderPreserveFocus(); });
+    }
+    els('.tab').forEach(function(btn){
+      btn.addEventListener('click', function(){ ui.category = btn.getAttribute('data-tab'); render(); });
+    });
+    var hideSold = el('#hide-sold');
+    if (hideSold){ hideSold.addEventListener('change', function(){ ui.hideSold = hideSold.checked; render(); }); }
+
+    var editToggle = el('#edit-toggle');
+    if (editToggle){ editToggle.addEventListener('click', function(){ ui.editMode = !ui.editMode; if(!ui.editMode) ui.showSettings=false; render(); }); }
+    var settingsToggle = el('#settings-toggle');
+    if (settingsToggle){ settingsToggle.addEventListener('click', function(){ ui.showSettings = !ui.showSettings; render(); }); }
+
+    var ownerToggle = el('#owner-toggle');
+    if (ownerToggle){ ownerToggle.addEventListener('click', function(){ ui.showOwnerLogin = true; ui.ownerError = ''; render(); }); }
+    var ownerCancel = el('#owner-cancel');
+    if (ownerCancel){ ownerCancel.addEventListener('click', function(){ ui.showOwnerLogin = false; ui.ownerError = ''; render(); }); }
+    var ownerSignout = el('#owner-signout');
+    if (ownerSignout){
+      ownerSignout.addEventListener('click', function(){
+        if (!window.confirm('Sign out of owner mode on this browser?')) return;
+        clearOwnerConfig();
+        ui.canEdit = false; ui.editMode = false; ui.showOwnerLogin = false;
+        render();
+      });
+    }
+    var ownerConnect = el('#owner-connect');
+    if (ownerConnect){
+      ownerConnect.addEventListener('click', function(){
+        var cfg = {
+          owner: (el('#owner-username').value || '').trim(),
+          repo: (el('#owner-repo').value || '').trim(),
+          branch: (el('#owner-branch').value || 'main').trim() || 'main',
+          token: (el('#owner-token').value || '').trim()
+        };
+        if (!cfg.owner || !cfg.repo || !cfg.token){
+          ui.ownerError = 'Fill in username, repo and token.';
+          render();
+          return;
+        }
+        ui.ownerBusy = true; ui.ownerError = '';
+        render();
+        verifyGithubAccess(cfg).then(function(){
+          setOwnerConfig(cfg);
+          ui.canEdit = true; ui.showOwnerLogin = false; ui.ownerBusy = false;
+          render();
+          showToast('Signed in as owner.');
+        }, function(err){
+          ui.ownerBusy = false;
+          ui.ownerError = 'Could not connect — ' + (err && err.message ? err.message : 'check the details and try again.');
+          render();
+        });
+      });
+    }
+
+    // field edits: keep in-memory, no re-render needed except sold checkbox on view (toggles stamp visually only after save)
+    els('[data-field]').forEach(function(inputEl){
+      var handler = function(){
+        var id = inputEl.getAttribute('data-id');
+        var field = inputEl.getAttribute('data-field');
+        var item = findItem(id);
+        if (!item) return;
+        var val = inputEl.type === 'checkbox' ? inputEl.checked : inputEl.value;
+        if (field === 'price' || field === 'originalPrice'){
+          val = Math.max(0, Math.round(Number(val) || 0));
+        }
+        item[field] = val;
+      };
+      inputEl.addEventListener(inputEl.tagName === 'SELECT' || inputEl.type === 'checkbox' ? 'change' : 'blur', handler);
+    });
+
+    els('[data-action="remove"]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var id = btn.getAttribute('data-id');
+        if (!window.confirm('Remove this lot from the catalogue?')) return;
+        STATE.items = STATE.items.filter(function(it){ return it.id !== id; });
+        render();
+      });
+    });
+
+    els('[data-action="add"]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var cat = btn.getAttribute('data-cat');
+        var maxLot = STATE.items.reduce(function(m,it){ return Math.max(m, it.lot); }, 0);
+        var newItem = {
+          category: cat, name: 'New lot', notes: '', brand: '', condition: 'Good',
+          originalPrice: 0, price: 0, link: '', images: [], sold: false,
+          lot: maxLot + 1, id: 'lot-' + String(maxLot + 1).padStart(3,'0')
+        };
+        STATE.items.push(newItem);
+        render();
+      });
+    });
+
+    var setTitle = el('#set-title'), setSub = el('#set-subtitle'), setWa = el('#set-whatsapp'),
+        setEmail = el('#set-email'), setFb = el('#set-fb'), setDz = el('#set-dz');
+    if (setTitle) setTitle.addEventListener('blur', function(){ STATE.settings.title = setTitle.value; });
+    if (setSub) setSub.addEventListener('blur', function(){ STATE.settings.subtitle = setSub.value; });
+    if (setWa) setWa.addEventListener('blur', function(){ STATE.settings.whatsapp = setWa.value.replace(/[^0-9]/g,''); });
+    if (setEmail) setEmail.addEventListener('blur', function(){ STATE.settings.email = setEmail.value; });
+    if (setFb) setFb.addEventListener('blur', function(){ STATE.settings.facebookLink = setFb.value; });
+    if (setDz) setDz.addEventListener('blur', function(){ STATE.settings.dubizzleLink = setDz.value; });
+
+    var saveBtn = el('#save-btn');
+    if (saveBtn){ saveBtn.addEventListener('click', doSave); }
+
+    els('[data-gallery]').forEach(function(g){
+      var dotsWrap = g.parentElement.querySelector('.thumb-dots');
+      var dots = dotsWrap ? Array.prototype.slice.call(dotsWrap.children) : [];
+      g.addEventListener('scroll', function(){
+        if (!dots.length) return;
+        var idx = Math.round(g.scrollLeft / g.clientWidth);
+        dots.forEach(function(d, i){ d.classList.toggle('active', i === idx); });
+      }, { passive: true });
+    });
+    els('[data-nav]').forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        var thumb = btn.parentElement;
+        var g = thumb ? thumb.querySelector('[data-gallery]') : null;
+        if (!g) return;
+        var dir = Number(btn.getAttribute('data-nav'));
+        g.scrollBy({ left: dir * g.clientWidth, behavior: 'smooth' });
+      });
+    });
+    els('[data-dot]').forEach(function(dot){
+      dot.addEventListener('click', function(e){
+        e.preventDefault();
+        var thumb = dot.closest('.thumb');
+        var g = thumb ? thumb.querySelector('[data-gallery]') : null;
+        if (!g) return;
+        var idx = Number(dot.getAttribute('data-dot'));
+        g.scrollTo({ left: idx * g.clientWidth, behavior: 'smooth' });
+      });
+    });
+    els('.thumb-img').forEach(function(img){
+      img.addEventListener('click', function(e){
+        e.preventDefault();
+        var card = img.closest('[data-card-id]');
+        if (!card) return;
+        var item = findItem(card.getAttribute('data-card-id'));
+        if (!item) return;
+        var imgs = (item.images || []).filter(Boolean);
+        var idx = Number(img.getAttribute('data-idx')) || 0;
+        openLightbox(imgs, idx);
+      });
+    });
+  }
+
+  // ---------- lightbox (click a photo to enlarge) ----------
+  var lightboxState = { images: [], index: 0 };
+
+  function updateLightbox(){
+    var img = el('#lightbox-img');
+    if (!img) return;
+    img.src = lightboxState.images[lightboxState.index] || '';
+    var multi = lightboxState.images.length > 1;
+    var counter = el('#lightbox-counter'), prev = el('#lightbox-prev'), next = el('#lightbox-next');
+    if (counter){ counter.textContent = multi ? (lightboxState.index + 1) + ' / ' + lightboxState.images.length : ''; counter.hidden = !multi; }
+    if (prev) prev.hidden = !multi;
+    if (next) next.hidden = !multi;
+  }
+
+  function openLightbox(images, index){
+    if (!images || !images.length) return;
+    lightboxState.images = images;
+    lightboxState.index = Math.max(0, Math.min(index || 0, images.length - 1));
+    updateLightbox();
+    var box = el('#lightbox');
+    if (box) box.hidden = false;
+  }
+
+  function closeLightbox(){
+    var box = el('#lightbox');
+    if (box) box.hidden = true;
+  }
+
+  function stepLightbox(dir){
+    var n = lightboxState.images.length;
+    if (!n) return;
+    lightboxState.index = (lightboxState.index + dir + n) % n;
+    updateLightbox();
+  }
+
+  function initLightbox(){
+    var box = el('#lightbox');
+    if (!box) return;
+    var closeBtn = el('#lightbox-close'), prevBtn = el('#lightbox-prev'), nextBtn = el('#lightbox-next');
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (prevBtn) prevBtn.addEventListener('click', function(e){ e.stopPropagation(); stepLightbox(-1); });
+    if (nextBtn) nextBtn.addEventListener('click', function(e){ e.stopPropagation(); stepLightbox(1); });
+    box.addEventListener('click', function(e){ if (e.target === box) closeLightbox(); });
+    document.addEventListener('keydown', function(e){
+      if (box.hidden) return;
+      if (e.key === 'Escape') closeLightbox();
+      else if (e.key === 'ArrowLeft') stepLightbox(-1);
+      else if (e.key === 'ArrowRight') stepLightbox(1);
+    });
+  }
+
+  // avoid losing focus/cursor while typing in search: lightweight targeted update
+  function renderPreserveFocus(){
+    var active = document.activeElement;
+    var wasSearch = active && active.id === 'search-input';
+    var caret = wasSearch ? active.selectionStart : null;
+    render();
+    if (wasSearch){
+      var s = el('#search-input');
+      if (s){ s.focus(); try{ s.setSelectionRange(caret, caret); }catch(e){} }
+    }
+  }
+
+  function showToast(msg){
+    var t = document.createElement('div');
+    t.className = 'toast';
+    t.textContent = msg;
+    document.body.appendChild(t);
+    setTimeout(function(){ t.remove(); }, 4200);
+  }
+
+  // ---------- GitHub-backed persistence (owner mode) ----------
+  function ghHeaders(cfg){
+    return {
+      'Authorization': 'Bearer ' + cfg.token,
+      'Accept': 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28'
+    };
+  }
+
+  function ghJson(url, opts){
+    return fetch(url, opts).then(function(res){
+      return res.text().then(function(text){
+        var body = {};
+        try { body = text ? JSON.parse(text) : {}; } catch(e){}
+        if (!res.ok){
+          var msg = (body && body.message) ? body.message : ('GitHub error ' + res.status);
+          var e = new Error(msg);
+          e.status = res.status;
+          throw e;
+        }
+        return body;
+      });
+    });
+  }
+
+  function utf8ToBase64(str){
+    var bytes = new TextEncoder().encode(str);
+    var binary = '';
+    var chunk = 0x8000;
+    for (var i = 0; i < bytes.length; i += chunk){
+      binary += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
+    }
+    return btoa(binary);
+  }
+
+  function verifyGithubAccess(cfg){
+    var url = GITHUB_API + '/repos/' + encodeURIComponent(cfg.owner) + '/' + encodeURIComponent(cfg.repo)
+      + '/git/refs/heads/' + encodeURIComponent(cfg.branch);
+    return ghJson(url, { headers: ghHeaders(cfg) });
+  }
+
+  // Writes via the Git Data API (blob + tree + commit + ref update) rather than the
+  // Contents API, since items.json (with embedded photos) is well beyond the Contents
+  // API's comfortable size range; the Git Data API documents support up to 100MB blobs.
+  function githubSaveFile(cfg, path, content, message){
+    var base = GITHUB_API + '/repos/' + encodeURIComponent(cfg.owner) + '/' + encodeURIComponent(cfg.repo);
+    var headers = ghHeaders(cfg);
+    var jsonHeaders = {};
+    for (var k in headers){ jsonHeaders[k] = headers[k]; }
+    jsonHeaders['Content-Type'] = 'application/json';
+
+    var latestCommitSha, baseTreeSha, blobSha, newTreeSha;
+
+    return ghJson(base + '/git/refs/heads/' + encodeURIComponent(cfg.branch), { headers: headers })
+      .then(function(refData){
+        latestCommitSha = refData.object.sha;
+        return ghJson(base + '/git/commits/' + latestCommitSha, { headers: headers });
+      })
+      .then(function(commitData){
+        baseTreeSha = commitData.tree.sha;
+        return ghJson(base + '/git/blobs', {
+          method: 'POST', headers: jsonHeaders,
+          body: JSON.stringify({ content: utf8ToBase64(content), encoding: 'base64' })
+        });
+      })
+      .then(function(blobData){
+        blobSha = blobData.sha;
+        return ghJson(base + '/git/trees', {
+          method: 'POST', headers: jsonHeaders,
+          body: JSON.stringify({ base_tree: baseTreeSha, tree: [{ path: path, mode: '100644', type: 'blob', sha: blobSha }] })
+        });
+      })
+      .then(function(treeData){
+        newTreeSha = treeData.sha;
+        return ghJson(base + '/git/commits', {
+          method: 'POST', headers: jsonHeaders,
+          body: JSON.stringify({ message: message, tree: newTreeSha, parents: [latestCommitSha] })
+        });
+      })
+      .then(function(newCommit){
+        return ghJson(base + '/git/refs/heads/' + encodeURIComponent(cfg.branch), {
+          method: 'PATCH', headers: jsonHeaders,
+          body: JSON.stringify({ sha: newCommit.sha })
+        });
+      });
+  }
+
+  function doSave(){
+    var cfg = getOwnerConfig();
+    if (!cfg){ showToast('Sign in as owner first.'); return; }
+    var saveBtn = el('#save-btn');
+    if (saveBtn){ saveBtn.disabled = true; saveBtn.textContent = 'Saving…'; }
+    var payload = JSON.stringify({ items: STATE.items, settings: STATE.settings }, null, 2);
+    githubSaveFile(cfg, DATA_PATH, payload, 'Update catalogue via owner panel').then(function(){
+      showToast('Saved — live on the site within a minute or two.');
+      if (saveBtn){ saveBtn.disabled = false; saveBtn.textContent = 'Save changes'; }
+    }, function(err){
+      var extra = (err && err.status === 401) ? ' — sign out and reconnect with a fresh token.' : '';
+      showToast('Could not save: ' + (err && err.message ? err.message : 'unknown error') + extra);
+      if (saveBtn){ saveBtn.disabled = false; saveBtn.textContent = 'Save changes'; }
+    });
+  }
+
+  function fetchData(){
+    fetch(DATA_PATH, { cache: 'no-store' }).then(function(res){
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    }).then(function(data){
+      STATE = data;
+      render();
+      initLightbox();
+    }).catch(function(err){
+      root.innerHTML = '<div class="empty-state">Could not load the catalogue ('
+        + escapeHtml(err && err.message ? err.message : 'unknown error') + '). Try refreshing.</div>';
+    });
+  }
+
+  function boot(){
+    ui.canEdit = !!getOwnerConfig();
+    fetchData();
+  }
+
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+</body>
+</html>
