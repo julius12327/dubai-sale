@@ -687,10 +687,11 @@ footer.page-footer a{ text-decoration:underline; text-underline-offset:2px; }
   .edit-grid{ grid-template-columns:1fr; }
   .category-head h2{ font-size:1.15rem; }
 
-  /* Keep the sticky search/category bar compact on phones so it doesn't eat the screen while scrolling */
+  /* Keep the sticky search/category bar compact on phones so it doesn't eat the screen while scrolling.
+     Search and the "hide sold" toggle are hidden on phones; categories get the freed-up space. */
   .controls{ padding-block:8px; gap:6px 10px; }
-  .search-wrap{ flex:1 1 100%; min-width:0; }
-  .search-wrap input{ padding-top:7px; padding-bottom:7px; }
+  .search-wrap{ display:none; }
+  .check-toggle{ display:none; }
   .tabs{
     flex:1 1 auto;
     flex-wrap:nowrap;
@@ -700,9 +701,8 @@ footer.page-footer a{ text-decoration:underline; text-underline-offset:2px; }
     min-width:0;
   }
   .tabs::-webkit-scrollbar{ display:none; }
-  .tab{ flex:0 0 auto; padding:5px 9px; font-size:0.68rem; }
+  .tab{ flex:0 0 auto; padding:7px 13px; font-size:0.8rem; }
   .spacer{ display:none; }
-  .check-toggle{ flex:0 0 auto; }
 }
 </style>
 </head>
