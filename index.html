@@ -686,6 +686,23 @@ footer.page-footer a{ text-decoration:underline; text-underline-offset:2px; }
 @media (max-width:640px){
   .edit-grid{ grid-template-columns:1fr; }
   .category-head h2{ font-size:1.15rem; }
+
+  /* Keep the sticky search/category bar compact on phones so it doesn't eat the screen while scrolling */
+  .controls{ padding-block:8px; gap:6px 10px; }
+  .search-wrap{ flex:1 1 100%; min-width:0; }
+  .search-wrap input{ padding-top:7px; padding-bottom:7px; }
+  .tabs{
+    flex:1 1 auto;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    min-width:0;
+  }
+  .tabs::-webkit-scrollbar{ display:none; }
+  .tab{ flex:0 0 auto; padding:5px 9px; font-size:0.68rem; }
+  .spacer{ display:none; }
+  .check-toggle{ flex:0 0 auto; }
 }
 </style>
 </head>
@@ -927,9 +944,9 @@ footer.page-footer a{ text-decoration:underline; text-underline-offset:2px; }
   function renderNoticePanel(){
     return ''
       + '<div class="notice-panel">'
-        + '<div class="notice-item"><strong>Age:</strong> Everything here is less than two years old — many pieces are barely a year old. The only exception is the kite equipment, which is older than two years.</div>'
-        + '<div class="notice-item"><strong>Condition:</strong> <span class="cond-pill cond-excellent">Excellent</span> — like new, barely used · <span class="cond-pill cond-good">Good</span> — some wear from normal use, fully functional · <span class="cond-pill cond-fair">Fair</span> — noticeable wear or minor flaws, still fully functional.</div>'
-        + '<div class="notice-item"><strong>Photos:</strong> Not always ideal — this sale was put together quickly while packing to leave, so a few shots are rough phone photos rather than styled ones. The items themselves are as described.</div>'
+        + '<div class="notice-item"><strong>Age:</strong> Everything’s under two years old, except the kite gear.</div>'
+        + '<div class="notice-item"><strong>Condition:</strong> <span class="cond-pill cond-excellent">Excellent</span> like new · <span class="cond-pill cond-good">Good</span> light wear · <span class="cond-pill cond-fair">Fair</span> visible wear, still functional.</div>'
+        + '<div class="notice-item"><strong>Photos:</strong> Some are quick phone shots, not staged — items are as described.</div>'
       + '</div>';
   }
 
