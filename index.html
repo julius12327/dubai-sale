@@ -1070,6 +1070,12 @@ footer.page-footer a{ text-decoration:underline; text-underline-offset:2px; }
           render();
           return;
         }
+        var badField = findBadCharField(cfg);
+        if (badField){
+          ui.ownerError = 'The "' + badField + '" field has a character your browser can\'t send (probably a curly quote, dash, or invisible character picked up while copy-pasting). Retype or re-copy just that field and try again.';
+          render();
+          return;
+        }
         ui.ownerBusy = true; ui.ownerError = '';
         render();
         verifyGithubAccess(cfg).then(function(){
@@ -1251,6 +1257,20 @@ footer.page-footer a{ text-decoration:underline; text-underline-offset:2px; }
   }
 
   // ---------- GitHub-backed persistence (owner mode) ----------
+  // HTTP header values can only carry ISO-8859-1 bytes; a token/owner/repo/branch picked up
+  // with a stray curly quote, em dash, or invisible character from copy-paste makes fetch()
+  // throw a cryptic browser error. Catch it early and name the field instead.
+  function findBadCharField(cfg){
+    var fields = { 'GitHub username': cfg.owner, 'Repository name': cfg.repo, 'Branch': cfg.branch, 'Personal access token': cfg.token };
+    for (var name in fields){
+      var val = fields[name] || '';
+      for (var i = 0; i < val.length; i++){
+        if (val.charCodeAt(i) > 255){ return name; }
+      }
+    }
+    return null;
+  }
+
   function ghHeaders(cfg){
     return {
       'Authorization': 'Bearer ' + cfg.token,
@@ -1340,6 +1360,11 @@ footer.page-footer a{ text-decoration:underline; text-underline-offset:2px; }
   function doSave(){
     var cfg = getOwnerConfig();
     if (!cfg){ showToast('Sign in as owner first.'); return; }
+    var badField = findBadCharField(cfg);
+    if (badField){
+      showToast('Saved config has a bad character in "' + badField + '" — sign out and reconnect.');
+      return;
+    }
     var saveBtn = el('#save-btn');
     if (saveBtn){ saveBtn.disabled = true; saveBtn.textContent = 'Saving…'; }
     var payload = JSON.stringify({ items: STATE.items, settings: STATE.settings }, null, 2);
